@@ -9,8 +9,11 @@
   "license": "MIT",
   "dependencies": {
     "@material/top-app-bar": "^3.2.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-material-design": "^4.1.1",
     "material-components-web": "^3.2.0",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {

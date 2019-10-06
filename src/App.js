@@ -1,12 +1,18 @@
 import React from "react"
-import MenuBar from "../src/MenuBar"
+import NavBar from "./NavBar"
+import SearchBar from "./SearchBar"
 
 
 function App(){
 
+
   
       return (
-        <div className="container">
+        <div className='container'>
+        <div className="d-flex flex-column bd-highlight mb-3 justify-content-center">
+          <NavBar/>
+          <SearchBar/>
+          
           {/* <section className="section">
             <input type="text" className="text-center list-group-item list-group-item-action flex-column align-items-start" aria-label="Large" aria-describedby="inputGroup-sizing-m"
             id="SearchBar" onChange={this.handleChange} placeholder="Search..." /> 
@@ -16,18 +22,8 @@ function App(){
             {/* <section>
               {element}
             </section> */}
-        <TopAppBar
-        title='San Francisco, CA'
-        navigationIcon={<MaterialIcon
-          icon='menu'
-          onClick={() => console.log('click')}
-        />}
-          actionItems={[
-            <MaterialIcon icon='file_download' />,
-            <MaterialIcon icon='print' />,
-            <MaterialIcon icon='bookmark' />,
-          ]}
-        />
+        
+        </div>
         </div>
     )
         }

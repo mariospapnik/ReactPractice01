@@ -1,0 +1,39 @@
+/* @import url('https://fonts.googleapis.com/css?family=Mukta&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800&display=swap&subset=latin-ext');
+
+body {
+    font-family: 'Mukta', sans-serif;
+}
+
+#astraka-navbar {
+    font-size: 15pt;
+    /* letter-spacing: 2pt; */
+    font-weight: 600;
+    margin: 15pt;
+    border-bottom: 1pt solid black;
+}
+
+#astraka-navbar a{
+    color: black;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    /* border-bottom: 1pt solid black; */
+}
+#astraka-navbar li :hover{
+    -moz-text-decoration-line: line-through;
+    text-decoration-line: line-through; 
+}
+
+
+#astraka-search-bar {
+    max-width: 1200px;
+    width: 80%;
+    font-size: 18pt;
+    background-color: transparent;
+    border: 0;
+}
+
+#astraka-search-bar input :focus {
+    background-color: aqua;
+}
+
