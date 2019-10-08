@@ -1,31 +1,29 @@
-import React from "react"
+import React,{useState} from "react"
 import NavBar from "./NavBar"
 import SearchBar from "./SearchBar"
+import SearchResults from "./SearchResults"
 
 
 function App(){
 
+  const [result,setResult] = useState()
+  console.log("render App")
 
+  const getResult = (token) => {
+    setResult(token)
+  }
+
+  console.log("render App After")
   
-      return (
-        <div className='container'>
-        <div className="d-flex flex-column bd-highlight mb-3 justify-content-center">
-          <NavBar/>
-          <SearchBar/>
-          
-          {/* <section className="section">
-            <input type="text" className="text-center list-group-item list-group-item-action flex-column align-items-start" aria-label="Large" aria-describedby="inputGroup-sizing-m"
-            id="SearchBar" onChange={this.handleChange} placeholder="Search..." /> 
-            <TokensList tokens={this.state.items} element={this.handleElement}/>
-          </section> */}
-
-            {/* <section>
-              {element}
-            </section> */}
-        
-        </div>
-        </div>
-    )
+  return (
+    <div className='container'>
+    <div className="d-flex flex-column bd-highlight mb-3 justify-content-center">
+      <NavBar/>
+      <SearchBar getResult = {getResult} />
+      <SearchResults result = {result} />  
+    </div>
+    </div>
+  )
         }
 
 export default App;

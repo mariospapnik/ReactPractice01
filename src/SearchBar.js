@@ -1,22 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 
 
-function SearchBar() {
+function SearchBar({getResult}) {
 
-    // handleChange() {
-        
-    // }
+    const [token,setToken] = useState(' ')
+    console.log("render SearchBar")
+    // getResult()
 
     return (
         <div className='d-flex justify-content-center'>
         <input type="text" 
-        className="text-center list-group-item list-group-item-action " 
-        aria-label="Large" aria-describedby="inputGroup-sizing-m"
-        id="astraka-search-bar" 
-        // onChange={handleChange} 
-        placeholder="Search..." /> 
-        {/* <TokensList tokens={this.state.items} element={this.handleElement}/> */}
+            className="text-center list-group-item list-group-item-action " 
+            aria-label="Large" aria-describedby="inputGroup-sizing-m"
+            id="astraka-search-bar" 
+            onChange={ (e)=> {
+                const newtoken = e.target.value;
+                setToken( (newtoken.length > 2)? newtoken : ' ')
+                getResult((newtoken.length > 2)? newtoken : ' ')
+            }} 
+            placeholder="Search..." />
         </div>
         
     )

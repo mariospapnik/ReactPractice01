@@ -12,13 +12,13 @@ function NavBar(){
 
   return(
     <div id='astraka-navbar' className='d-flex justify-content-center'>
-      <div class='nav navbar-expand-lg'>
+      <div className='nav navbar-expand-lg'>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className="navbar-nav mr-auto">
             {renderMenuItem('home','#')}
             {renderMenuItem('mountains','#')}
